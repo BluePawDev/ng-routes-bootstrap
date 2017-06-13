@@ -12,9 +12,9 @@ app.config(function($routeProvider) {
 	}).when('/wc', {
 		template: 'views/partials/wolverine.html',
 		controller: 'WolverineController as wc'
-	}).when('/fc', {
-		templateUrl: 'views/partials/flash.html',
-		controller: 'FlashController as fc'
+	}).when('/qc', {
+		templateUrl: 'views/partials/quicksilver.html',
+		controller: 'QuicksilverController as qc'
 	})
 });
 
@@ -24,8 +24,8 @@ app.controller('PhoenixController', PhoenixController);
 // WolverineController
 app.controller('WolverineController', WolverineController);
 
-// FlashController
-app.controller('FlashController', FlashController);
+// QuicksilverController
+app.controller('QuicksilverController', QuicksilverController);
 
 function PhoenixController() {
 	console.log('PhoenixController is loaded');
@@ -35,6 +35,6 @@ function WolverineController() {
 	console.log('WolverineController is loaded');
 }
 
-function FlashController() {
-	console.log('FlashController is loaded');
+function QuicksilverController() {
+	console.log('QuicksilverController is loaded');
 }
