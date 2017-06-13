@@ -1,0 +1,26 @@
+{
+  "name": "ng-routes-bootstrap",
+  "version": "1.0.0",
+  "description": "ng-routes-bootstrap",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BluePawDev/ng-routes-bootstrap.git"
+  },
+  "author": "jaruby@me.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BluePawDev/ng-routes-bootstrap/issues"
+  },
+  "homepage": "https://github.com/BluePawDev/ng-routes-bootstrap#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.3"
+  }
+}
