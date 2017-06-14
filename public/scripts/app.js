@@ -6,13 +6,13 @@ var app = angular.module('routeApp', ['ngRoute']);
 
 // Define client-side routes
 app.config(function($routeProvider) {
-	$routeProvider.when('/', {
-		template: 'views/partials/phoenix.html',
+	$routeProvider.when('/pho', {
+		templateUrl: 'views/partials/phoenix.html',
 		controller: 'PhoenixController as pc'
-	}).when('/wc', {
-		template: 'views/partials/wolverine.html',
+	}).when('/wol', {
+		templateUrl: 'views/partials/wolverine.html',
 		controller: 'WolverineController as wc'
-	}).when('/qc', {
+	}).when('/qs', {
 		templateUrl: 'views/partials/quicksilver.html',
 		controller: 'QuicksilverController as qc'
 	})
@@ -20,6 +20,17 @@ app.config(function($routeProvider) {
 
 // PhoenixController
 app.controller('PhoenixController', PhoenixController);
+
+app.controller('nav', nav);
+
+function nav($location) {
+	var vm = this;
+
+	// vm.wolClick() {
+	// 	location.path('/wol');
+	// };
+
+}
 
 // WolverineController
 app.controller('WolverineController', WolverineController);

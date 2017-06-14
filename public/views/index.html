@@ -9,29 +9,44 @@
     <script type="text/javascript" src='/scripts/app.js'></script>
     <link rel="stylesheet" href="/vendors/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet">
   </head>
 
-  <body>
+  <body ng-app='routeApp'>
     <!-- START Header -->
     <header>
       <h1>Awesome X-Men!</h1>
-      <nav>
-        <button type="button" name="phoenix">Phoenix</button>
-        <button type="button" name="wolverine">Wolverine</button>
-        <button type="button" name="quicksilver">Quicksilver</button>
+      <nav ng-controller='nav'>
+        <a href="#!/pho" class='btn btn-primary btn-sm'>Phoenix</a>
+        <a href="#!/wol" class='btn btn-primary btn-sm'>Wolverine</a>
+        <a href="#!/qs" class='btn btn-primary btn-sm'>Quicksilver</a>
       </nav>
+      <hr>
     </header>
     <!-- END Header -->
 
-    <!-- START Main -->
-    <main ng-app='routeApp'>
-      <ng-view></ng-view>
-    </main>
-    <!-- END Main -->
+    <!-- START of container -->
+    <div class="container">
+
+      <!-- START of div=row -->
+      <div class="row">
+
+        <!-- START Main -->
+        <main>
+          <ng-view></ng-view>
+        </main>
+        <!-- END Main -->
+
+      </div>
+      <!-- END of div=row -->
+
+    </div>
+    <!-- END of container -->
 
     <!-- START Footer -->
     <footer>
-
+      <hr>
     </footer>
     <!-- END Footer -->
 
