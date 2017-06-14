@@ -24,9 +24,9 @@
       to get support for themselves.</p>
 
   </div>
-  <div class="col-lg-1">
-    <img src='/images/quicksilver.jpg' alt="">
-    <img src='/images/pietro-maximoff.jpg' alt="">
+  <div class="col-lg-1" ng-controller='QuicksilverController as qc'>
+    <img src='/images/quicksilver.jpg' ng-mouseover='qc.show = false' ng-show='qc.show'>
+    <img src='/images/pietro-maximoff.jpg' ng-mouseout='qc.show = true' ng-hide='qc.show'>
 
   </div>
   <div class="col-lg-3">

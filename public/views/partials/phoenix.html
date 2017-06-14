@@ -20,9 +20,9 @@
       to the team, Wolverine.</p>
 
   </div>
-  <div class="col-lg-2">
-    <img src='/images/phoenix2.jpg' alt="">
-    <img src='/images/jean-grey.jpg' alt="">
+  <div class="col-lg-2" ng-controller='PhoenixController as pc'>
+    <img src='/images/phoenix2.jpg' ng-mouseover='pc.show = false' ng-show='pc.show'>
+    <img src='/images/jean-grey.jpg' ng-mouseout='pc.show = true' ng-hide='pc.show'>
 
   </div>
 

@@ -19,9 +19,9 @@
       Canadian military during World War I. Logan spends time in Madripoor before settling in Japan,
       where he marries Itsu and has a son, Daken. Logan is unaware of his son for many years.</p>
   </div>
-  <div class="col-lg-2">
-    <img src='/images/wolverine.jpg' alt="">
-    <img src='/images/logan.jpg' alt="">
+  <div class="col-lg-2" ng-controller='WolverineController as wc'>
+    <img src='/images/wolverine.jpg' alt="" ng-mouseover='wc.show = false' ng-show='wc.show'>
+    <img src='/images/logan.jpg' alt="" ng-mouseout='wc.show=true' ng-hide='wc.show'>
 
   </div>
 </div>

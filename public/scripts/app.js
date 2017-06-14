@@ -7,15 +7,18 @@ var app = angular.module('routeApp', ['ngRoute']);
 // Define client-side routes
 app.config(function($routeProvider) {
 	$routeProvider.when('/pho', {
-		templateUrl: 'views/partials/phoenix.html',
-		controller: 'PhoenixController as pc'
-	}).when('/wol', {
-		templateUrl: 'views/partials/wolverine.html',
-		controller: 'WolverineController as wc'
-	}).when('/qs', {
-		templateUrl: 'views/partials/quicksilver.html',
-		controller: 'QuicksilverController as qc'
-	})
+			templateUrl: 'views/partials/phoenix.html',
+			controller: 'PhoenixController as pc'
+		}).when('/wol', {
+			templateUrl: 'views/partials/wolverine.html',
+			controller: 'WolverineController as wc'
+		}).when('/qs', {
+			templateUrl: 'views/partials/quicksilver.html',
+			controller: 'QuicksilverController as qc'
+		})
+		.otherwise({
+			redirectTo: '/pho'
+		});
 });
 
 // PhoenixController
@@ -25,11 +28,6 @@ app.controller('nav', nav);
 
 function nav($location) {
 	var vm = this;
-
-	// vm.wolClick() {
-	// 	location.path('/wol');
-	// };
-
 }
 
 // WolverineController
@@ -40,12 +38,16 @@ app.controller('QuicksilverController', QuicksilverController);
 
 function PhoenixController() {
 	console.log('PhoenixController is loaded');
+	var vm = this;
+	vm.show = true;
 }
 
 function WolverineController() {
-	console.log('WolverineController is loaded');
+	var vm = this;
+	vm.show = true;
 }
 
 function QuicksilverController() {
-	console.log('QuicksilverController is loaded');
+	var vm = this;
+	vm.show = true;
 }
